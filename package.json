@@ -1,0 +1,80 @@
+{
+  "name": "egg-react-ssr-app-example",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@loadable/component": "^5.15.0",
+    "@loadable/server": "^5.15.1",
+    "egg": "^2.30.0",
+    "egg-view-nunjucks": "^2.3.0",
+    "egg-view-react-loadable": "^0.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.17.0",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-transform-object-assign": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/runtime": "^7.15.4",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.15.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "egg-bin": "^4.16.4",
+    "eslint": "^7.32.0",
+    "eslint-config-ali": "^12.2.2",
+    "eslint-config-egg": "^9.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsdoc": "^37.7.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.0",
+    "mini-css-extract-plugin": "^2.2.2",
+    "node-sass": "^7.0.0",
+    "postcss-loader": "^6.1.1",
+    "react-hot-loader": "^4.13.0",
+    "sass-loader": "^12.1.0",
+    "terser-webpack-plugin": "^5.2.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.52.0",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --port=7001 --title=egg-view-react-loadable-ssr-example",
+    "stop": "egg-scripts stop --title=egg-view-react-loadable-ssr-example",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "lint": "eslint .",
+    "dev:client": "NODE_ENV=development webpack serve --config build/webpack/webpack.config.dev.js",
+    "build": "NODE_ENV=production webpack --config build/webpack/webpack.config.prod.js",
+    "prepare": "husky install"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
